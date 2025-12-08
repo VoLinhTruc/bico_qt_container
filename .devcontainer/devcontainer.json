@@ -1,0 +1,29 @@
+{
+
+  "name": "bico_qt_container",
+  // Build configuration
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".",
+    "args": {}
+  },
+  // Container runtime configuration
+  "runArgs": [
+    "--name", "/bico_qt_container",
+    "--privileged",
+    // "--network", "host",
+  ],
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ],
+  // Add DISPLAY environment variable
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
+
+  // "postCreateCommand": "" ,
+  // "postStartCommand": "",
+  // "postAttachCommand": "",
+
+
+}
