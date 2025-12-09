@@ -27,7 +27,7 @@ RUN apt-get install -y \
 RUN apt-get install -y \
         qt6-wayland \
         libqt6waylandclient6 \
-        libwayland-dev \
+        libwayland-dev 
 
 RUN apt-get install -y \
         qml6-module-qt3d-animation \
