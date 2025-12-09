@@ -4,7 +4,7 @@ USER root
 
 RUN apt-get update
 
-RUN apt install -y \
+RUN apt-get install -y \
         qt6-base-dev \
         qt6-base-private-dev \
         qt6-declarative-dev \
@@ -24,12 +24,12 @@ RUN apt install -y \
         libqt6quicktimeline6-dev \
         libqt6serialport6-dev
 
-RUN apt install -y \
+RUN apt-get install -y \
         qt6-wayland \
         libqt6waylandclient6 \
         libwayland-dev \
 
-RUN apt install -y \
+RUN apt-get install -y \
         qml6-module-qt3d-animation \
         qml6-module-qt3d-core \
         qml6-module-qt3d-extras \
@@ -88,13 +88,12 @@ RUN apt install -y \
         qml6-module-quick3d-particles3d \
         qml6-module-quick3d
 
-
-RUN apt install -y \
+RUN apt-get install -y \
         clang-15 \
         clangd-15 \
         libclang-15-dev
 
-RUN apt install -y \
+RUN apt-get install -y \
         libgl1-mesa-dev \
         libvulkan-dev \
         libxcb-xinput-dev \
@@ -107,6 +106,7 @@ RUN apt install -y \
         libxcb-xkb1 \
         libxcb-randr0 \
         libxcb-icccm4
+
 RUN apt-get -y install qtcreator
 
 #  Fix issue with missing libxcb-cursor0 dependency for PyQt
